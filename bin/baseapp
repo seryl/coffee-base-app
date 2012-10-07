@@ -3,5 +3,5 @@
 
 (function() {
   var pkg = require('../package.json');
-  application = new Application(pkg)
+  var application = new Application(pkg)
 })()
