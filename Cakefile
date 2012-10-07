@@ -8,4 +8,3 @@ task 'watch', 'Starts a watcher for the src/*.coffee files', ->
   exec 'coffee -w src/ -o lib/', (err, stdout, stderr) ->
     throw err if err
     console.log stdout + stderr
-

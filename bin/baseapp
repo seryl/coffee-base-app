@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+;Application = require('../lib/application');
+
+(function() {
+  var pkg = require('../package.json');
+  application = new Application(pkg)
+})()
