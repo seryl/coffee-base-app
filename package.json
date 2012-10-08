@@ -5,5 +5,11 @@
     "log4js": "0.5.x",
     "optimist": "0.3.x",
     "nconf": "0.6.x"
+  },
+  "devDependencies": {
+    "vows": "0.6.x"
+  },
+  "scripts": {
+    "test": "vows --spec"
   }
 }
