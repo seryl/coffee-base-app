@@ -6,6 +6,6 @@ nconf = require 'nconf'
 ###
 class Config extends Singleton
   constructor: ->
-      @config = nconf
+    return nconf
 
 module.exports = Config
