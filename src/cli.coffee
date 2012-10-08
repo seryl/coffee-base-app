@@ -1,12 +1,14 @@
 optimist = require 'optimist'
+Logger = require './logger'
 Config = require './config'
 
 ###*
  * The command line interface class.
 ###
 class CLI
-  constructor: (@pkg_info, @logger) ->
+  constructor: (@pkg_info) ->
     @config = Config.get()
+    @logger = Logger.get()
     @argv = optimist
       .usage("Usage: " + @pkg_info.name)
 
