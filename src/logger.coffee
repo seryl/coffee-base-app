@@ -1,5 +1,6 @@
 Singleton = require './singleton'
-log4js = require 'log4js'
+winston = require 'winston'
+MixlibLog = require('winston-mixlib-log').MixlibLog
 
 ###*
  * Logging class that acts as a singleton.
@@ -9,6 +10,14 @@ class Logger extends Singleton
    * At some point we're going to want to allow appenders here.
   ###
   constructor: ->
-    return log4js.getLogger()
+    @logger = new winston.Logger
+      transports: [
+        new MixlibLog
+          timestamp: true
+      ]
+    @logger.log = () ->
+      args = arguments
+      winston.Logger.prototype.log.apply(this, args)
+    return @logger
 
 module.exports = Logger

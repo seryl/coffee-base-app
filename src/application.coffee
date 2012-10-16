@@ -6,10 +6,10 @@ Config = require './config'
  * The base application class.
 ###
 class Application
-  constructor: (@pkg_info) ->
+  constructor: () ->
     @config = Config.get()
     @logger = Logger.get()
-    @cli = new CLI(@pkg_info, @logger)
+    @cli = new CLI()
 
   abort: (str) =>
     @logger.info('aborting...')

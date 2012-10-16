@@ -1,21 +1,27 @@
 optimist = require 'optimist'
 Logger = require './logger'
 Config = require './config'
+require('pkginfo')(module, 'name')
 
 ###*
  * The command line interface class.
 ###
 class CLI
-  constructor: (@pkg_info) ->
+  constructor: () ->
     @config = Config.get()
     @logger = Logger.get()
     @argv = optimist
-      .usage("Usage: " + @pkg_info.name)
+      .usage("Usage: " + exports.name)
 
       # configuration
       .alias('c', 'config')
-      .describe('c', 'Load the configuration file')
+      .describe('c', 'The configuration file to use')
       .default('c', "/etc/baseapp.json")
+
+      # logging
+      .alias('l', 'loglevel')
+      .describe('l', 'Set the log level (debug, info, warn, error, fatal)')
+      .default('l', 'warn')
 
       # help
       .alias('h', 'help')
