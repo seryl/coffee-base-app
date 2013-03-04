@@ -17,7 +17,7 @@ class Logger extends Singleton
         new MixlibLog
           timestamp: true
       ]
-    @logger.log = () ->
+    @logger.log = ->
       winston.Logger.prototype.log.apply(@, arguments)
     
   get: =>
