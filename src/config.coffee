@@ -6,6 +6,9 @@ nconf = require 'nconf'
 ###
 class Config extends Singleton
   constructor: ->
-    return nconf
+    @nconf = nconf
+  
+  get: =>
+    @nconf
 
-module.exports = Config
+module.exports = Config.get()
