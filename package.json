@@ -19,6 +19,10 @@
     "chai": "1.5.0",
     "coffee-script": "1.6.2"
   },
-  "scripts": { "pretest": "cake build", "prepublish": "cake build" },
+  "scripts": {
+    "pretest": "cake build",
+    "prepublish": "cake build",
+    "test": "cake -r dot test"
+  },
   "main": "./lib/application"
 }
