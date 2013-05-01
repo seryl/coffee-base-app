@@ -3,7 +3,9 @@ logger = require './logger'
 config = require 'nconf'
 require('pkginfo')(module, 'name')
 
-# The command line interface class.
+###
+The command line interface class.
+###
 class CLI
   constructor: () ->
     @argv = optimist
