@@ -1,7 +1,7 @@
 coffee-base-app
 ===============
 
-A reasonable base coffeescript application template
+A reasonable base coffeescript application template.
 
 Usage
 -----
