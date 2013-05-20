@@ -10,7 +10,8 @@ task 'build', 'Build project from src/*.coffee to lib/*.js', ->
 task 'watch', 'Starts a watcher for the src/*.coffee files', ->
   exec 'coffee -w src/ -o lib/', (err, stdout, stderr) ->
     throw err if err
-    console.log stdout + stderr
+    if stdout or stderr
+      console.log stdout + stderr
 
 task 'doc', 'Generates documenation for the project', ->
   exec "./node_modules/.bin/codo --cautious"
