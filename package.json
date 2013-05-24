@@ -1,6 +1,6 @@
 {
   "name":"coffee-base-app",
-  "version":"0.0.2",
+  "version":"0.0.3",
   "description": "A nodejs base application skeleton",
   "author": "Josh Toft <joshtoft@gmail.com>",
   "repository": {
