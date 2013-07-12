@@ -10,7 +10,7 @@
   "dependencies": {
     "winston": "0.7.2",
     "winston-mixlib-log": "0.0.2",
-    "optimist": "0.5.2",
+    "optimist": "0.6.0",
     "nconf": "0.6.7",
     "pkginfo": "0.3.0"
   },
